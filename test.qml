@@ -11,16 +11,15 @@ Window {
     visible: true
     title: "My Ripple"
 
-//    SimpleRipple{
-//        anchors.fill: parent;
-//        color: "#d4ff47"
-//    }
+    //    SimpleRipple{
+    //        anchors.fill: parent;
+    //        color: "#d4ff47"
+    //    }
 
     SimpleRipple {
         color: "#50ffa070"
         anchors.fill: parent
     }
-
 
     Button {
         x: 270
@@ -29,16 +28,15 @@ Window {
         height: 60
         text: "Button"
 
-        background: Rectangle{
+        background: Rectangle {
             color: "#ebebeb"
         }
 
-        SimpleRipple{
-            anchors.fill: parent;
+        SimpleRipple {
+            anchors.fill: parent
             color: "#7988eb"
         }
     }
-
 
     Rectangle {
         x: 374
@@ -47,15 +45,11 @@ Window {
         height: 60
         color: "#ebebeb"
 
-
-        SimpleRipple{
-            anchors.fill: parent;
+        SimpleRipple {
+            anchors.fill: parent
             color: "#7988eb"
         }
     }
-
-
-
 
     DropShadow {
         anchors.fill: itemRect
@@ -67,22 +61,22 @@ Window {
         source: itemRect
     }
 
-    Rectangle{
-        id:itemRect
+    Rectangle {
+        id: itemRect
         x: 51
         y: 159
-        width: 200;
-        height: 80;
-        radius: 50;
-        clip: true;
+        width: 200
+        height: 80
+        radius: 50
+        clip: true
 
-        SimpleRipple{
-            anchors.fill: parent;
-//            color: "#ffa070"
+        SimpleRipple {
+            anchors.fill: parent
+            //            color: "#ffa070"
             color: "#50ffa070"
             acceptEvent: true
-            xClipRadius:parent.radius-10;
-            yClipRadius:parent.radius;
+            xClipRadius: parent.radius - 10
+            yClipRadius: parent.radius
         }
     }
 
@@ -96,20 +90,20 @@ Window {
         source: itemRect2
     }
 
-    Rectangle{
-        id:itemRect2
+    Rectangle {
+        id: itemRect2
         x: 51
         y: 59
-        width: 200;
-        height: 80;
-        radius: 5;
-        clip: true;
+        width: 200
+        height: 80
+        radius: 5
+        clip: true
 
-        SimpleRipple{
-            anchors.fill: parent;
+        SimpleRipple {
+            anchors.fill: parent
             color: "#50ffa070"
-            acceptEvent: true;
-            clipRadius:parent.radius;
+            acceptEvent: true
+            clipRadius: parent.radius
         }
     }
 
@@ -159,7 +153,7 @@ Window {
 
         Text {
             text: qsTr("text")
-            anchors.centerIn: parent;
+            anchors.centerIn: parent
         }
 
         IconRipple {
@@ -167,7 +161,7 @@ Window {
             anchors.fill: parent
             acceptEvent: true
             clipRadius: parent.radius
-            imageSource: "/home/mmjvox/Documents/start.png";
+            imageSource: "/home/mmjvox/Documents/start.png"
         }
         clip: true
     }
@@ -191,7 +185,7 @@ Window {
 
         Text {
             text: qsTr("text")
-            anchors.centerIn: parent;
+            anchors.centerIn: parent
         }
 
         ImageRipple {
@@ -199,7 +193,7 @@ Window {
             anchors.fill: parent
             acceptEvent: true
             clipRadius: parent.radius
-            imageSource: "/home/mmjvox/Documents/2.jpg";
+            imageSource: "/home/mmjvox/Documents/2.jpg"
         }
         clip: true
     }
@@ -216,9 +210,9 @@ Window {
             color: "#50ffa070"
             anchors.fill: parent
             clipRadius: parent.radius
-            acceptEvent: true;
-            imageSource: "/home/mmjvox/Documents/start.png";
-            bounce: IconRipple.ClockWise;
+            acceptEvent: true
+            imageSource: "/home/mmjvox/Documents/start.png"
+            bounce: IconRipple.ClockWise
         }
     }
 
@@ -234,11 +228,9 @@ Window {
             color: "#50ffa070"
             anchors.fill: parent
             clipRadius: parent.radius
-            acceptEvent: true;
-            imageSource: "/home/mmjvox/Documents/start.png";
-            bounce: IconRipple.Counter_ClockWise;
+            acceptEvent: true
+            imageSource: "/home/mmjvox/Documents/start.png"
+            bounce: IconRipple.Counter_ClockWise
         }
     }
-
-
 }

@@ -1,26 +1,30 @@
 # Another-Ripple
 This is a Ripple effect in QML, that can be used everywhere. 
 
-![](https://github.com/mmjvox/Another-Ripple/raw/main/sceencapture.gif)
+<video width="640" height="480" controls>
+  <source src="screenrecord.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-1. Add .pri to your project  
-
-2. Register qml type in main.cpp or anywhere 
-``` 
-qmlRegisterType<AnotherRipple>("AnotherRipple", 1, 0, "SimpleRipple"); 
+1. Build this project with cmake:
+```
+mkdir build && cd build && cmake ..
 ```
 
-3. import in qml 
+2. Install the plugins:
 ```
-import AnotherRipple 1.0
+cmake --install .
 ```
 
-4. Use as an item inside another item:
+3. Use as an item inside another item:
 ```
+import AnotherRipple
+import QtQuick
+
 Item{
      width:100
      height:100
-      
+
       SimpleRipple{
           anchors.fill: parent;
           color: "#50ffa070"
