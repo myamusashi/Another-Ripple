@@ -1,10 +1,7 @@
 # Another-Ripple
 This is a Ripple effect in QML, that can be used everywhere. 
 
-<video width="640" height="480" controls>
-  <source src="screenrecord.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![](https://github.com/myamusashi/Another-Ripple/raw/main/screenrecord.gif)
 
 1. Build this project with cmake:
 ```
