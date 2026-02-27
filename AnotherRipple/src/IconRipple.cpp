@@ -34,7 +34,7 @@ void IconRipple::paint(QPainter *painter)
                 painter->setOpacity(newalfa);
             }
 
-            auto transformedImg = mImage.transformed(QMatrix().rotate(rotate_calc(radius)));
+            auto transformedImg = mImage.transformed(QTransform().rotate(rotate_calc(radius)));
 
             QRectF targetRect(devide2(std::get<0>(pos),radius), devide2(std::get<1>(pos),radius), multipl2(radius), multipl2(radius));
             QRectF sourceRect(0,0, transformedImg.width(), transformedImg.height());
@@ -48,9 +48,9 @@ void IconRipple::paint(QPainter *painter)
     endPaint();
 }
 
-void IconRipple::setCircleColor(QString colorSTR)
+void IconRipple::setCircleColor(const QColor &color)
 {
-    circleColor = colorSTR;
+    circleColor = color;
     tintImage();
     emit colorChanged();
 }

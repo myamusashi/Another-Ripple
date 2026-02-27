@@ -13,7 +13,7 @@ void AnotherRippleBase::mousePressEvent(QMouseEvent *event)
 {
     addFrameHandler();
 
-    startPoses.append( std::make_tuple(event->localPos().x(),event->localPos().y(), 1) );
+    startPoses.append( std::make_tuple(event->position().x(),event->position().y(), 1) );
 
     acceptEvent? event->accept() : event->ignore();
 }
@@ -91,14 +91,14 @@ void AnotherRippleBase::addFrameHandler()
 
 }
 
-QString AnotherRippleBase::getCircleColor()
+QColor AnotherRippleBase::getCircleColor() const
 {
-    return circleColor.name();
+    return circleColor;
 }
 
-void AnotherRippleBase::setCircleColor(QString colorSTR)
+void AnotherRippleBase::setCircleColor(const QColor &color)
 {
-    circleColor = colorSTR;
+    circleColor = color;
     emit colorChanged();
 }
 

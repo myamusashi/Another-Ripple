@@ -3,10 +3,13 @@
 
 
 #include "AnotherRippleBase.h"
+#include <QtQml/qqmlregistration.h>
 
 namespace AnotherRipple {
 class SimpleRipple : public AnotherRippleBase
 {
+    Q_OBJECT
+    QML_ELEMENT
 public:
     SimpleRipple(QQuickItem *parent = 0);
     void paint(QPainter *painter) override;

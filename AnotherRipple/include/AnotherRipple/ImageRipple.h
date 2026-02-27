@@ -3,17 +3,19 @@
 
 
 #include "AnotherRippleBase.h"
+#include <QtQml/qqmlregistration.h>
 
 namespace AnotherRipple {
 class ImageRipple : public AnotherRippleBase
 {
     Q_PROPERTY(QString imageSource READ getImageSource WRITE setImageSource NOTIFY imageSourceChanged)
     Q_OBJECT
+    QML_ELEMENT
 public:
     ImageRipple(QQuickItem *parent = 0);
     void paint(QPainter *painter) override;
 
-    void setCircleColor(QString colorSTR) override;
+    void setCircleColor(const QColor &color) override;
 
     void setImageSource(QString source);
     QString getImageSource();

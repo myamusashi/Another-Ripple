@@ -3,6 +3,7 @@
 
 
 #include "AnotherRippleBase.h"
+#include <QtQml/qqmlregistration.h>
 
 namespace AnotherRipple {
 class IconRipple : public AnotherRippleBase
@@ -10,6 +11,7 @@ class IconRipple : public AnotherRippleBase
     Q_PROPERTY(QString imageSource READ getImageSource WRITE setImageSource NOTIFY imageSourceChanged)
     Q_PROPERTY(int bounce READ getBounce WRITE setBounce NOTIFY bounceChanged)
     Q_OBJECT
+    QML_ELEMENT
 public:
     enum Bounce
     {
@@ -22,7 +24,7 @@ public:
     IconRipple(QQuickItem *parent = 0);
     void paint(QPainter *painter) override;
 
-    void setCircleColor(QString colorSTR) override;
+    void setCircleColor(const QColor &color) override;
 
     void setImageSource(QString source);
     QString getImageSource();

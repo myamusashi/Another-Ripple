@@ -46,9 +46,9 @@ void ImageRipple::paint(QPainter *painter)
     endPaint();
 }
 
-void ImageRipple::setCircleColor(QString colorSTR)
+void ImageRipple::setCircleColor(const QColor &color)
 {
-    circleColor = colorSTR;
+    circleColor = color;
     tintImage();
     emit colorChanged();
 }
